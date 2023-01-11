@@ -18207,7 +18207,6 @@ textarea.form-control-lg {
 }
 
 .wrapper {
-  max-width: 1460px;
   margin: 0 auto;
   background: #fff;
   position: relative;
@@ -18227,7 +18226,7 @@ textarea.form-control-lg {
   position: relative;
   max-width: 359px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #FBFBFB;
   border-right: 1px solid rgb(232, 232, 232);
   margin-right: 38px;
@@ -18470,9 +18469,11 @@ textarea.form-control-lg {
 }
 
 .posts {
+  padding-right: 50px;
+  width: 100%;
   padding-top: 44px;
   display: grid;
-  grid-template-columns: repeat(2, 294px);
+  grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
   gap: 44px 47px;
 }
 .posts__item {
@@ -18480,7 +18481,6 @@ textarea.form-control-lg {
   border-radius: 5px;
 }
 .posts__img-wrapper {
-  max-width: 294px;
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -18532,13 +18532,6 @@ textarea.form-control-lg {
   padding: 0 17px;
   display: block;
   margin-bottom: 18px;
-}
-
-.posts-feed .posts__item {
-  height: 385px;
-}
-.posts-feed .big {
-  height: 450px;
 }
 
 .posts-profile {
@@ -18675,9 +18668,8 @@ textarea.form-control-lg {
 }
 
 .fixed {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 15px;
   z-index: 3;
 }
 
@@ -18690,6 +18682,20 @@ textarea.form-control-lg {
   font-size: 16px;
 }
 
+@media screen and (min-width: 1500px) {
+  .w-2 {
+    width: 16.66%;
+  }
+  .w-10 {
+    width: 83.33%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .posts {
+    grid-template-columns: repeat(2, 294px);
+    padding-right: 0;
+  }
+}
 @media screen and (max-width: 1300px) {
   .content {
     padding: 40px 30px;
