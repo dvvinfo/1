@@ -19564,8 +19564,19 @@ textarea.form-control-lg {
   }
 }
 @media screen and (max-width: 768px) {
+  .posts-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 30px;
+    padding: 0;
+    color: #9bbbd2;
+  }
   .sidebar-posts {
-    padding-top: 100px;
+    padding-top: 70px;
+  }
+  .pt-custom {
+    padding-top: 0;
   }
   .post-content .right-block {
     display: block;
@@ -19606,7 +19617,7 @@ textarea.form-control-lg {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 5;
+    z-index: 2;
   }
   .avatar {
     margin: 0;
@@ -19836,7 +19847,7 @@ textarea.form-control-lg {
     border-radius: 100%;
     margin-left: 20px;
   }
-  .user-mobile__name .Александр_Дворецкий {
+  .user-mobile__name {
     font-size: 25px;
     color: rgb(0, 0, 0);
   }

@@ -18,6 +18,7 @@ const navMobile = document.querySelector(".nav-mobile");
 const navBtnClose = document.querySelector('.nav-mobile__btn-close')
 const btnCloseRightBlock = document.querySelector(".btn-close-right-block")
 const hiddenBlock = document.querySelector(".hidden-block")
+const postsBtnClose = document.querySelector('.posts-btn-close')
 
 if (sidebarFixed) {
   window.addEventListener("scroll", scroll);
@@ -49,6 +50,11 @@ if (avatarWrapper) {
     }
     
   });
+}
+if (postsBtnClose) {
+  postsBtnClose.addEventListener('click', () => {
+    sidebar.classList.remove("sidebar-show");
+  })
 }
 if (navBtnClose) {
   navBtnClose.addEventListener('click', () => {
