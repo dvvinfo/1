@@ -19,6 +19,7 @@ const postsBtnClose = document.querySelector(".posts-btn-close");
 const profileHidden = document.querySelector(".profile-hidden");
 const burgerPersonBtn = document.querySelector(".burger-person ");
 const btnCloseProfile = document.querySelector(".btn-close-profile");
+const logoHidden = document.querySelector(".logo-hidden ")
 
 if (sidebarFixed) {
   window.addEventListener("scroll", scroll);
@@ -37,8 +38,16 @@ function scroll() {
 function scrollHeader() {
   if (window.scrollY > 100) {
     header.classList.add("sticky");
+    // if(logoHidden) {
+    //   logoHidden.classList.add('logo-show')
+    // }
+    
   } else {
     header.classList.remove("sticky");
+    // if(logoHidden) {
+    //   logoHidden.classList.remove('logo-show')
+    // }
+  
   }
 }
 if (avatarWrapper) {
@@ -52,7 +61,9 @@ if (avatarWrapper) {
 
 if (burgerPersonBtn) {
   burgerPersonBtn.addEventListener("click", () => {
-    profileHidden.classList.add("profile-show");
+    if(profileHidden) {
+      profileHidden.classList.add("profile-show");
+    }
   });
 }
 if (btnCloseProfile) {
@@ -147,7 +158,7 @@ document.addEventListener("click", (e) => {
     !e.target.closest(".profile-hidden") &&
     !e.target.closest(".burger-person")
   ) {
-    if (categoryHidden) {
+    if (profileHidden) {
       profileHidden.classList.remove("profile-show");
     }
   }
